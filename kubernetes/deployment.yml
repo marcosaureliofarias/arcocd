@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy-marcos
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: deploy-marcos
+  template:
+    metadata:
+      labels:
+        app: deploy-marcos
+    spec:
+      containers:
+      - name: marcos-container
+        image: marcosaureliofarias/deploy
+        ports:
+        - containerPort: 8080
