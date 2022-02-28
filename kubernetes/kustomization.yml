@@ -4,7 +4,7 @@ resources:
   - deployment.yml
   - service.yml
 
-namespace: arcocd
+namespace: marcos
 
 images:
 - name: deploy-marcos
