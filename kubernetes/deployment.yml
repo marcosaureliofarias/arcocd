@@ -13,7 +13,7 @@ spec:
         app: deploy-marcos
     spec:
       containers:
-      - name: marcos-container
-        image: marcosaureliofarias/deploy
+      - name: deploy-marcos
+        image: deploy-marcos
         ports:
         - containerPort: 8080

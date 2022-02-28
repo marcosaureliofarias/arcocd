@@ -17,3 +17,31 @@ jobs:
           password: Samuel@221568
           repository: marcosaureliofarias/deploy
           tags: ${{ github.sha }}, latest
+
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: kustomize
+        uses: imranismail/setup-kustomize@v1
+        with:
+          kustomize_version: v3.6.1
+
+      - name: update k8s
+        run: |
+          cd kubernetes
+          kustomize edit set image deploy-marcos=marcosaureliofarias/deploy:${{ github.sha }}
+          cat kustomization.yml
+
+      - name: commit 
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "Deploy Action"
+          git commit -am "change image tag"
+
+      - name: push
+        uses: ad-m/github-push-action@master

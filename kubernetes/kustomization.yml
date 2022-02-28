@@ -8,5 +8,5 @@ namespace: arcocd
 
 images:
 - name: deploy-marcos
-  newName: marcosaureliofarias/deploy
+  newName: deploy-marcos
   newTag: v1
