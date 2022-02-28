@@ -13,7 +13,7 @@ jobs:
       - name: build image and push to docker hub
         uses: docker/build-push-action@v1.1.0
         with:
-          username: ${{ secrets.DOCKER_LOGIN }}
+          username: marcosaureliofarias
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: marcosaureliofarias/deploy
           tags: ${{ github.sha }}, latest
