@@ -15,5 +15,5 @@ jobs:
         with:
           username: marcosaureliofarias
           password: ${{ secrets.DOCKER_PASSWORD }}
-          repository: marcosaureliofarias/deploy
+          repository: marcosaureliofarias/deploy:v1
           tags: ${{ github.sha }}, latest
