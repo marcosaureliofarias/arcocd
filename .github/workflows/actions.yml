@@ -14,6 +14,6 @@ jobs:
         uses: docker/build-push-action@v1.1.0
         with:
           username: marcosaureliofarias
-          password: ${{ secrets.DOCKER_PASSWORD }}
-          repository: marcosaureliofarias/deploy:v1
+          password: Samuel@221568
+          repository: marcosaureliofarias/deploy
           tags: ${{ github.sha }}, latest
