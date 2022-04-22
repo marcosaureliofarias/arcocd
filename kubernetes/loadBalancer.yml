@@ -3,9 +3,9 @@ kind: Service
 metadata:
   name: deploy-marcos
 spec:
-  type: LoadBalancer
-  ports:
-    - port: 8080
-      nodePort: 40002
   selector:
     app: deploy-marcos
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 40004
