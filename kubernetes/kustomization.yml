@@ -3,7 +3,7 @@ kind: Kustomization
 resources:
 - deployment.yml
 - service.yml
-- LoadBalancer.yml
+- loadBalancer.yml
 
 namespace: marcos
 
