@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: deploy-marcos
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: deploy-marcos
   ports:
