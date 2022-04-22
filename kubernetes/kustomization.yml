@@ -3,14 +3,11 @@ kind: Kustomization
 resources:
 - deployment.yml
 - service.yml
+- nodeport.yml
 
 namespace: marcos
 
 images:
 - name: deploy-marcos
   newName: marcosaureliofarias/deploy
-<<<<<<< HEAD
-  newTag: 6cbfd0af41cb657e5ae24fca27602dfb53b6b392
-=======
   newTag: 92274b32cc388eda0c788ccc6d3201affec28f25
->>>>>>> 041480431c77f42ba6e4c6be26d359a0214aa77f
