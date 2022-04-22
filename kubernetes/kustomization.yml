@@ -10,4 +10,4 @@ namespace: marcos
 images:
 - name: deploy-marcos
   newName: marcosaureliofarias/deploy
-  newTag: 0f78ab6da3356958e2adec7184e636d0e2c93fea
+  newTag: fdf08f7383356800d9ddbc31a385356e5d84fff0
