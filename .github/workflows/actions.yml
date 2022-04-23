@@ -1,7 +1,7 @@
 name: CD
 on:
   push:
-    branches: [main]
+    branches: [teste]
 jobs:
   build:
     name: Build
