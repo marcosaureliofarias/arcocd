@@ -44,4 +44,7 @@ jobs:
           git commit -am "change image tag"
 
       - name: push
-        uses: ad-m/github-push-action@teste
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: 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
+          branch: teste
